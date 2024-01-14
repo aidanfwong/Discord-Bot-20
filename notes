@@ -1,0 +1,12 @@
+NO GIF PERMISSION CODE LINE:
+
+if message.author.id == "discord id" and "block wword" in message.content.lower():
+      await message.delete()
+      await message.channel.send('stop typing <@discord id>')
+
+
+My Discord ID: 497736201575596052
+
+Bobzer ID: 227573896306622464
+
+Petrilli ID: 469655001476890625

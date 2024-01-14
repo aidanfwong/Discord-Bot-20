@@ -1,0 +1,27 @@
+for code that I'm not using anymore
+
+ if message.author == client.user: 
+      return
+    msg_content = message.content.lower()
+
+    Danil_No = ['https', '.com', '.mp4']
+    
+    if any(word in msg_content for word in Danil_No):
+      await message.delete() 
+      await message.channel.send("no type bobzer") 
+
+@client.event
+async def on_message(message):
+      for attachment in message.attachments:
+        if attachment['filename']== "mp4" and message.author.id == 497736201575596052:
+          client.delete_message(message)
+
+
+async def on_message(message):
+  if message.author == client.user:
+    return
+
+#not necessary anymore, lowkey got discontinued
+    #deletes a certain clip
+    if "https://lowkey.gg/v/ddcc501a-3be9-40bf-bea0-2708c34b50d6" in message.content.lower():
+      await message.delete()
