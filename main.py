@@ -15,25 +15,10 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-    #if user types !jay, the bot will respond to it
-    if message.content.startswith('!?'):
-        await message.channel.send('ballsack')
-
-    #If user types !boosted, it will send a random pic of michael whiffing
-    if message.content.startswith('!boosted'):
-        await message.channel.send(random.choice(michael_things))
-
-    #8ball command, send !8ball to get a random answer
-    if message.content.startswith('!8ball'):
-        await message.channel.send(random.choice(ball_things))
 
     #sends pic of fortnite flopper
     if message.content.startswith('!flopper'):
         await message.channel.send('https://cdn.discordapp.com/attachments/793563899201978388/794251087975809084/flopper.png')
-
-    #lists commands
-    if message.content.startswith('!help'):
-        await message.channel.send('COMMAND LIST: !jay, !boosted, !flopper, !8ball')
 
     #dissallows Danil to send links from "tenor" domain
     if message.author.id == 227573896306622464 and "tenor" in message.content.lower():
@@ -72,21 +57,6 @@ async def on_message(message):
 
             #dissallows Summer to send links from "tenor" domain
     if message.author.id == 463728067861282816 and "tenor" in message.content.lower():
-      await message.delete()
-      await message.channel.send('dummy <@463728067861282816>')
-
-    #dissallows Summer to send links from "discordapp" domain
-    if message.author.id == 463728067861282816 and "discordapp" in message.content.lower():
-      await message.delete()
-      await message.channel.send('dummy <@463728067861282816>')
-    
-    #dissallows Summer to send links from "jpg" domain
-    if message.author.id ==463728067861282816 and ".jpg" in message.content.lower():
-      await message.delete()
-      await message.channel.send('dummy <@463728067861282816>')
-
-  #dissallows Summer to send links from "giphy" domain
-    if message.author.id == 463728067861282816 and "giphy" in message.content.lower():
       await message.delete()
       await message.channel.send('dummy <@463728067861282816>')
 
